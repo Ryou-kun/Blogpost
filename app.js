@@ -11,7 +11,7 @@ mongoose.Promise = global.Promise;
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb+srv://admin:admin@cluster0.weaokyc.mongodb.net/BlogDB");
+  await mongoose.connect(process.env.URL);
 }
 
 const blogSchema = new mongoose.Schema({
